@@ -1,11 +1,11 @@
 const container = document.querySelector('.container');
-const search = document.querySelector('.search-box button');
+const search = document.querySelector('.search-box');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
-search.addEventListener('click', () => {
-
+search.addEventListener('submit', (e) => {
+    e.preventDefault()
     const APIKey = '1ae753ecf16622ca3d2bd86183eb0308';
     const city = document.querySelector('.search-box input').value;
 
